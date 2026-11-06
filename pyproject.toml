@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-rewind"
+version = "0.1.0"
+description = "Record, replay and fork AI agent runs - deterministic, offline, any framework."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Lijo Ferdinand", email = "lijoferdinand@gmail.com" }]
+keywords = ["llm", "agents", "debugging", "replay", "testing", "openai", "anthropic", "mcp"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []   # standard library only, on purpose
+
+[project.scripts]
+rewind = "rewind.cli:main"
+
+[project.urls]
+Repository = "https://github.com/lijo123ferdinand/rewind"
+
+[tool.setuptools.packages.find]
+where = ["src"]
